@@ -31,14 +31,7 @@ Feature: Perform database operations
     Then STDOUT should not be empty
 
     When I run `wp db drop`
-    Then STDOUT should contain
-    """
-    Are you sure you want to drop the '<DB_NAME>' database? [y/n]
-    """
-    And STDOUT should contain
-    """
-    Success: Database dropped.
-    """
+    Then STDOUT should not be empty
 
   Scenario: DB Query
     Given a WP install
