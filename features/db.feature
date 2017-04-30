@@ -40,16 +40,6 @@ Feature: Perform database operations
     Success: Database dropped.
     """
 
-    When I run `wp db reset`
-    Then STDOUT should contain
-    """
-    Are you sure you want to reset the '<DB_NAME>' database? [y/n]
-    """
-    And STDOUT should contain
-    """
-    Success: Database reset.
-    """
-
   Scenario: DB Query
     Given a WP install
 
