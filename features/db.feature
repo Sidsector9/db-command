@@ -30,9 +30,6 @@ Feature: Perform database operations
     When I run `wp db repair`
     Then STDOUT should not be empty
 
-    When I run `wp db drop`
-    Then STDOUT should not be empty
-
   Scenario: DB Query
     Given a WP install
 
